@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+  @layer components {
+      .btn {
+          @apply bg-blue-500 hover:bg-blue-700 text-white font-bold p-3 rounded-lg m-2
+      }
+
+      .sale {
+          @apply absolute top-0 right-0 rounded-full bg-red-700/75 p-3 m-2
+      }
+
+      .row {
+          @apply flex flex-row flex-wrap justify-between items-center 
+      }
+
+  }
+
+  .active {
+
+      @apply font-black bg-[#1abc9c] p-3 rounded-lg 
+  }
+  .outer_card{
+    @apply p-7
+  }
