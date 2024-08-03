@@ -56,5 +56,5 @@ export default function Footer() {
           Copyright © Your Website 2021
         </div>
       </>
-    );
+    )
 }

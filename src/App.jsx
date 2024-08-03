@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './components/Layout/Layout';
 import Home from './components/Home/Home';
 import NotFound from './components/NotFound/NotFound';
-import CounterContextProvider from './Context/UserContext';
+// import CounterContextProvider from './Context/UserContext';
 import Contact from './components/Contact/Contact';
 import Portfolio from './components/Portfolio/Portfolio';
 import About from './components/About/About';
@@ -33,10 +33,11 @@ function App() {
 
 
   return (
-    
-      <CounterContextProvider >
-        <RouterProvider router={routing}></RouterProvider>;
-      </CounterContextProvider>   
+    <RouterProvider router={routing}></RouterProvider>
+
+    // <CounterContextProvider >
+    //     <RouterProvider router={routing}></RouterProvider>;
+    //   </CounterContextProvider>
   )
 }
 
