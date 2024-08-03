@@ -54,7 +54,7 @@ export default function Navbar() {
             </svg>
           </button>
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul className=" font-medium flex flex-col p-4 md:p-0 my-4     md:flex-row md:space-x-8 rtl:space-x-reverse md:my-0  ">
+            <ul className=" font-medium flex flex-col p-4 md:p-0 my-4     md:flex-row md:space-x-8 rtl:space-x-reverse md:my-0  me-7">
               <li className="my-5">
                 <NavLink to="about" className="text-white ">
                   ABOUT
@@ -62,7 +62,7 @@ export default function Navbar() {
               </li>
               <li className="my-5">
                 <NavLink to="portfolio" className="text-white ">
-                  PORTFOLIO{" "}
+                  PORTFOLIO
                 </NavLink>
               </li>
               <li className="my-5">

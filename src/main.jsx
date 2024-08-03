@@ -7,5 +7,5 @@ import "../node_modules/flowbite/dist/flowbite.min.js";
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
 )

@@ -34,10 +34,10 @@ function App() {
 
   return (
     
-      <CounterContextProvider>
+      <CounterContextProvider >
         <RouterProvider router={routing}></RouterProvider>;
       </CounterContextProvider>   
-  );
+  )
 }
 
 export default App

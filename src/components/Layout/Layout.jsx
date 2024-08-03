@@ -17,7 +17,6 @@ export default function Layout() {
       <div className="pt-12">
         <Outlet />
       </div>
-      <Footer />
-    </>
-  );
+      <Footer/></>
+  )
 }

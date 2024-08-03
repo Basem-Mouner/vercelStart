@@ -52,7 +52,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="bg-[#1a252f] p-8 text-white  w-full text-center">
+        <div className="bg-[#1a252f] p-8 text-white  w-full text-center ">
           Copyright © Your Website 2021
         </div>
       </>
