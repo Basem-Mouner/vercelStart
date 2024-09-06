@@ -1,7 +1,11 @@
 import { useState } from 'react'
 
 import './App.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import {
+  createBrowserRouter,
+  RouterProvider,
+  createHashRouter,
+} from "react-router-dom";
 import Layout from './components/Layout/Layout';
 import Home from './components/Home/Home';
 import NotFound from './components/NotFound/NotFound';
@@ -16,7 +20,7 @@ function App() {
 
   
   
-  let routing = createBrowserRouter([
+  let routing = createHashRouter([
     {
       path: "",
       element: <Layout />,
@@ -24,7 +28,7 @@ function App() {
         { index: true, element: <Home /> },
         { path: "contact", element: <Contact /> },
         { path: "portfolio", element: <Portfolio /> },
-        { path: "about", element: <About/> },
+        { path: "about", element: <About /> },
         { path: "*", element: <NotFound /> },
       ],
     },

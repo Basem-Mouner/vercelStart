@@ -4,6 +4,17 @@ import { Link, NavLink } from "react-router-dom";
 // import { CounterContext } from "../../Context/UserContext";
 export default function Navbar() {
   // let { counter } = useContext(CounterContext);
+  const [isnav, setIsnav] = useState(false);
+  
+  function togg(isnav) {
+      // console.log(isnav);
+     if (isnav === false) {
+       setIsnav(true);
+     }
+     if (isnav === true) {
+       setIsnav(false);
+     }
+   }
 
   useEffect(() => {
     let navhight = document.querySelector(".navBar");
@@ -19,7 +30,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-[#2c3e50] navBar    border-gray-200 dark:bg-gray-900  fixed top-0 left-0 right-0 z-50 transition-all duration-1000">
+      <nav onScroll={()=>{}} className="bg-[#2c3e50] navBar    border-gray-200 dark:bg-gray-900  fixed top-0 left-0 right-0 z-50 transition-all duration-1000">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link
             to=""
@@ -29,14 +40,19 @@ export default function Navbar() {
               Start Framework
             </span>
           </Link>
+
           <button
-            data-collapse-toggle="navbar-default"
+            onClick={() => {
+              togg(isnav);
+              
+            }}
+            // data-collapse-toggle="navbar-default"
             type="button"
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-950 rounded-lg md:hidden  focus:outline-none focus:ring-2 focus:ring-gray-950 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-default"
-            aria-expanded="false"
+            // aria-controls="navbar-default"
+            // aria-expanded="false"
           >
-            {/* <span className="sr-only">Open main menu</span> */}
+            <span className="sr-only">Open main menu</span>
             <svg
               className="w-5 h-5"
               aria-hidden="true"
@@ -53,7 +69,8 @@ export default function Navbar() {
               />
             </svg>
           </button>
-          <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+          {/* large screen */}
+          <div className="hidden w-full md:block md:w-auto">
             <ul className=" font-medium flex flex-col p-4 md:p-0 my-4     md:flex-row md:space-x-8 rtl:space-x-reverse md:my-0  me-7">
               <li className="my-5">
                 <NavLink to="about" className="text-white ">
@@ -72,8 +89,33 @@ export default function Navbar() {
               </li>
             </ul>
           </div>
+          {/* mobile */}
+
+          {isnav ? (
+            <div className=" w-full block md:w-auto">
+              <ul className=" font-medium flex flex-col p-4 md:p-0 my-4     md:flex-row md:space-x-8 rtl:space-x-reverse md:my-0  me-7">
+                <li className="my-5">
+                  <NavLink to="about" className="text-white ">
+                    ABOUT
+                  </NavLink>
+                </li>
+                <li className="my-5">
+                  <NavLink to="portfolio" className="text-white ">
+                    PORTFOLIO
+                  </NavLink>
+                </li>
+                <li className="my-5">
+                  <NavLink to="contact" className="text-white">
+                    CONTACT
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
+          ) : null}
         </div>
       </nav>
     </>
   );
 }
+
+
